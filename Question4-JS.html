@@ -11,12 +11,17 @@
     <h1>HTML DOM Events</h1>
     <p>Trigger a function on hover that will output "Hello World":</p>
 
-    <button onmouseover="myFunction()">Action!</button>
+    <button onmouseover="myFunction()" onfocus="myFunction()" onkeydown="myFunction()" onmouseout="clearFunction()"
+        onblur="clearFunction()">Action!</button>
     <p id="demo"></p>
 </body>
 <script>
     function myFunction() {
         document.getElementById("demo").innerHTML = "Hello World";
+    }
+
+    function clearFunction() {
+        document.getElementById("demo").innerHTML = "";
     }
 </script>
 
